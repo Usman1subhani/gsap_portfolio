@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Work — Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <link rel="stylesheet" href="../assets/css/portfolio.css" />
+</head>
+<body>
+  <!-- CURSOR -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+  <div id="all-work-page" class="open">
+    <!-- curtain for open/close animation -->
+    <div class="aw-curtain" id="aw-curtain"></div>
+
+    <div class="aw-inner">
+      <!-- header -->
+      <div class="aw-header">
+        <div class="aw-logo"><span>&lt;</span>DEV<span>/&gt;</span> <span style="font-size:.85rem;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:.04em;margin-left:.5rem">/ all work</span></div>
+        <div class="aw-header-right">
+          <div class="aw-counter-badge">Showing <span id="aw-visible-count">12</span> projects</div>
+          <button class="aw-close" id="aw-close" aria-label="Close">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- filter bar -->
+      <div class="aw-filters" id="aw-filters">
+        <span class="aw-filter-label">Filter:</span>
+        <button class="aw-filter active" data-filter="all">All</button>
+        <button class="aw-filter" data-filter="web-app">Web App</button>
+        <button class="aw-filter" data-filter="mobile-app">Mobile App</button>
+        <button class="aw-filter" data-filter="dashboard">Dashboard</button>
+        <button class="aw-filter" data-filter="email">Email Template</button>
+        <button class="aw-filter" data-filter="open-source">Open Source</button>
+        <button class="aw-filter" data-filter="saas">SaaS</button>
+        <div class="aw-filter-line" id="aw-filter-line"></div>
+      </div>
+
+      <!-- scrollable content -->
+      <div class="aw-scroll" id="aw-scroll">
+
+        <div id="aw-grid-wrap">
+          <div class="aw-section-label" id="aw-section-label">All Projects</div>
+          <div class="aw-grid" id="aw-grid">
+            <!-- cards injected by JS -->
+          </div>
+          <div class="aw-empty" id="aw-empty">
+            <div class="aw-empty-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M10 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v4"/><path d="M16 19h6m-3-3v6"/></svg>
+            </div>
+            <h3>No Projects Found</h3>
+            <p>Try selecting a different filter to explore more work.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- bottom stats strip -->
+      <div class="aw-stats">
+        <div class="aw-stat">
+          <div class="aw-stat-num">12+</div>
+          <div class="aw-stat-label">Projects<br>Shipped</div>
+        </div>
+        <div class="aw-stat">
+          <div class="aw-stat-num">6</div>
+          <div class="aw-stat-label">Project<br>Types</div>
+        </div>
+        <div class="aw-stat">
+          <div class="aw-stat-num">3+</div>
+          <div class="aw-stat-label">Years<br>Experience</div>
+        </div>
+        <div class="aw-stat">
+          <div class="aw-stat-num">100%</div>
+          <div class="aw-stat-label">Client<br>Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/projects-data.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/projects.js"></script>
+</body>
+</html>

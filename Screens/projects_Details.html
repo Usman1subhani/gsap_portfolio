@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details — Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <link rel="stylesheet" href="../assets/css/portfolio.css" />
+</head>
+<body>
+  <!-- CURSOR -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+     PROJECT DETAIL PAGE — full-screen overlay
+  ══════════════════════════════════════════ -->
+  <div id="project-detail-page" class="open">
+    <div class="pd-progress-bar" id="pd-progress-bar"></div>
+    <!-- curtain animation overlay -->
+    <div class="pd-curtain" id="pd-curtain"></div>
+
+    <!-- sticky nav -->
+    <div class="pd-nav">
+      <button class="pd-back" id="pd-back">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
+        Back to Work
+      </button>
+      <div class="pd-nav-title" id="pd-nav-title">Project</div>
+      <div style="width:80px"></div>
+    </div>
+
+    <!-- hero -->
+    <div class="pd-hero" id="pd-hero">
+      <div class="pd-hero-img">
+        <img id="pd-hero-img" src="" alt="" />
+      </div>
+      <div class="pd-hero-gradient"></div>
+      <div class="pd-hero-content">
+        <div class="pd-hero-eyebrow" id="pd-hero-eyebrow">Project</div>
+        <h1 class="pd-hero-title" id="pd-hero-title"></h1>
+        <div class="pd-hero-meta" id="pd-hero-meta"></div>
+      </div>
+    </div>
+
+    <!-- body -->
+    <div class="pd-body">
+
+      <!-- overview -->
+      <div class="pd-overview">
+        <div class="pd-overview-text">
+          <h2>Project Overview</h2>
+          <p id="pd-overview-text"></p>
+        </div>
+        <div class="pd-overview-side">
+          <div class="pd-detail-group">
+            <h4>Tech Stack</h4>
+            <div class="pd-tech-pills" id="pd-tech-pills"></div>
+          </div>
+          <div class="pd-detail-group pd-challenges">
+            <h4>Key Challenge</h4>
+            <p id="pd-challenge-text"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- image gallery -->
+      <div class="pd-gallery-label">Gallery</div>
+      <div class="pd-gallery">
+        <div class="pd-gallery-item span-full pd-gallery-img-1">
+          <img id="pd-gallery-1" src="" alt="" />
+        </div>
+        <div class="pd-gallery-item pd-gallery-img-2">
+          <img id="pd-gallery-2" src="" alt="" />
+        </div>
+        <div class="pd-gallery-item pd-gallery-img-3">
+          <img id="pd-gallery-3" src="" alt="" />
+        </div>
+      </div>
+
+      <!-- feature highlights -->
+      <div class="pd-features">
+        <div class="pd-gallery-label" style="margin-bottom:2rem">Highlights</div>
+        <div class="pd-features-grid" id="pd-features-grid">
+          <!-- injected by JS -->
+        </div>
+      </div>
+
+      <!-- cta footer -->
+      <div class="pd-cta">
+        <div class="pd-cta-eyebrow">Explore This Project</div>
+        <h3 id="pd-cta-title">Ready to See It Live?</h3>
+        <p id="pd-cta-desc">Explore the live product or dig into the code.</p>
+        <div class="pd-cta-links" id="pd-cta-links"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/projects-data.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/projects_details.js"></script>
+</body>
+</html>

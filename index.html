@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usman Subhani — Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/portfolio.css" />
+</head>
+
+<body>
+
+  <!-- CURSOR -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo"><span>&lt;</span>USMAN<span>/&gt;</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button id="theme-btn" aria-label="Toggle theme">
+        <svg id="icon-moon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+        <svg id="icon-sun" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          style="display:none">
+          <circle cx="12" cy="12" r="5" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+      </button>
+      <a href="Screens/projects.html" class="nav-work-btn" id="nav-work-btn" aria-label="View all projects">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+          <path d="M7 17L17 7M17 7H7M17 7v10" />
+        </svg>
+        All Work
+      </a>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+     HERO
+═══════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-noise"></div>
+
+    <div class="hero-eyebrow" id="hero-eyebrow">
+      Full-Stack Developer · Available for hire
+    </div>
+
+    <h1 class="hero-title">
+      <div class="word"><span id="hw1">BUILDING</span></div>
+      <div class="word"><span id="hw2" class="stroke">DIGITAL</span></div>
+      <div class="word"><span id="hw3">PRODUCTS</span></div>
+    </h1>
+
+    <div class="hero-bottom" id="hero-bottom">
+      <p class="hero-desc">
+        Full-stack developer based in Rawalpindi. I craft fast, scalable,
+        and visually exceptional web experiences.
+      </p>
+      <div class="hero-scroll-hint">
+        <span>scroll</span>
+        <div class="scroll-bar"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+     ZOOM PORTAL — scroll zooms into a screen
+═══════════════════════════════════════ -->
+  <!-- <div id="zoom-portal">
+    <div class="zoom-sticky" id="zoom-sticky">
+      <div class="zoom-frame" id="zoom-frame">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=85" alt="Code" id="zoom-img" />
+      </div>
+      <div class="zoom-label" id="zoom-label">MY WORK</div>
+    </div>
+  </div> -->
+
+  <!-- ═══════════════════════════════════════
+     ABOUT — horizontal pinned scroll
+═══════════════════════════════════════ -->
+  <section id="about">
+    <div class="about-sticky">
+      <div class="about-track" id="about-track">
+        <div class="about-panel" id="ap0">
+          <div class="about-number">01</div>
+          <div class="about-text">
+            <h3>Who I Am</h3>
+            <p>I'm a full-stack developer who obsesses over performance, clean architecture, and interfaces that feel
+              alive. I turn complex problems into elegant, fast, and beautiful software.</p>
+            <div class="skill-grid">
+              <span class="sk">React</span><span class="sk">Next.js</span><span class="sk">TypeScript</span><span
+                class="sk">Node.js</span><span class="sk">PostgreSQL</span><span class="sk">Redis</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-panel" id="ap1">
+          <div class="about-number">02</div>
+          <div class="about-text">
+            <h3>What I Do</h3>
+            <p>From architecting REST APIs and microservices to building pixel-perfect UIs with smooth animations. I own
+              the entire stack — backend, frontend, deployment, and everything in between.</p>
+            <div class="skill-grid">
+              <span class="sk">Docker</span><span class="sk">AWS</span><span class="sk">GraphQL</span><span
+                class="sk">Prisma</span><span class="sk">MongoDB</span><span class="sk">Linux</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-panel" id="ap2">
+          <div class="about-number">03</div>
+          <div class="about-text">
+            <h3>The Numbers</h3>
+            <p>3+ years building production applications. 20+ shipped projects. 10+ satisfied clients. I write code that
+              scales, systems that don't break at 3am, and UIs users actually enjoy.</p>
+            <div class="skill-grid">
+              <span class="sk">3+ Years</span><span class="sk">20+ Projects</span><span class="sk">10+
+                Clients</span><span class="sk">Open Source</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="about-progress" id="about-progress">
+        <div class="prog-dot active" id="pd0"></div>
+        <div class="prog-dot" id="pd1"></div>
+        <div class="prog-dot" id="pd2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+     MARQUEE
+═══════════════════════════════════════ -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item">REACT<span class="dot"></span></div>
+      <div class="marquee-item">NEXT.JS<span class="dot"></span></div>
+      <div class="marquee-item">NODE.JS<span class="dot"></span></div>
+      <div class="marquee-item">TYPESCRIPT<span class="dot"></span></div>
+      <div class="marquee-item">POSTGRESQL<span class="dot"></span></div>
+      <div class="marquee-item">DOCKER<span class="dot"></span></div>
+      <div class="marquee-item">AWS<span class="dot"></span></div>
+      <div class="marquee-item">FIGMA<span class="dot"></span></div>
+      <!-- repeat for seamless loop -->
+      <div class="marquee-item">REACT<span class="dot"></span></div>
+      <div class="marquee-item">NEXT.JS<span class="dot"></span></div>
+      <div class="marquee-item">NODE.JS<span class="dot"></span></div>
+      <div class="marquee-item">TYPESCRIPT<span class="dot"></span></div>
+      <div class="marquee-item">POSTGRESQL<span class="dot"></span></div>
+      <div class="marquee-item">DOCKER<span class="dot"></span></div>
+      <div class="marquee-item">AWS<span class="dot"></span></div>
+      <div class="marquee-item">FIGMA<span class="dot"></span></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+     ANIMATE ANYTHING — GSAP-style horizontal word reveal
+═══════════════════════════════════════ -->
+  <section id="animate-anything">
+    <div class="aa-sticky">
+      <div class="aa-track" id="aa-track">
+
+        <!-- SLIDE 1 -->
+        <div class="aa-slide" id="aa-slide-0">
+          <div class="aa-shape aa-shape-ring"></div>
+          <div class="aa-shape aa-shape-dot"></div>
+          <span class="aa-slide-label" id="aa-label-0">What I believe in</span>
+          <div class="aa-phrase" id="aa-phrase-0">
+            <span class="aa-word"><span class="aa-word-inner">CODE</span></span>
+            <span class="aa-word"><span class="aa-word-inner stroke">SHOULD</span></span>
+            <span class="aa-word"><span class="aa-word-inner">FEEL</span></span>
+            <span class="aa-word"><span class="aa-word-inner accent">ALIVE.</span></span>
+          </div>
+          <p class="aa-sub" id="aa-sub-0">Every interaction, every transition — crafted with intention and precision.
+          </p>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="aa-slide" id="aa-slide-1">
+          <div class="aa-shape aa-shape-blob"></div>
+          <div class="aa-shape aa-shape-diamond"></div>
+          <span class="aa-slide-label" id="aa-label-1">My approach</span>
+          <div class="aa-phrase" id="aa-phrase-1">
+            <span class="aa-word"><span class="aa-word-inner accent">BUILD</span></span>
+            <span class="aa-word"><span class="aa-word-inner">FAST.</span></span>
+            <span class="aa-word"><span class="aa-word-inner stroke">SHIP</span></span>
+            <span class="aa-word"><span class="aa-word-inner">CLEAN.</span></span>
+            <span class="aa-word"><span class="aa-word-inner">ITERATE</span></span>
+            <span class="aa-word"><span class="aa-word-inner accent">ALWAYS.</span></span>
+          </div>
+          <p class="aa-sub" id="aa-sub-1">From first commit to production — performance, quality, and speed at every
+            step.</p>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="aa-slide" id="aa-slide-2">
+          <div class="aa-shape aa-shape-ring" style="top:auto;bottom:15%;right:12%;width:100px;height:100px;opacity:.5">
+          </div>
+          <div class="aa-shape aa-shape-dot"
+            style="top:auto;bottom:25%;left:auto;right:20%;width:18px;height:18px;background:rgba(255,107,107,.6)">
+          </div>
+          <span class="aa-slide-label" id="aa-label-2">The stack</span>
+          <div class="aa-phrase" id="aa-phrase-2">
+            <span class="aa-word"><span class="aa-word-inner">ANIMATE</span></span>
+            <span class="aa-word"><span class="aa-word-inner stroke">ANYTHING.</span></span>
+            <span class="aa-word"><span class="aa-word-inner">SHIP</span></span>
+            <span class="aa-word"><span class="aa-word-inner accent">EVERYTHING.</span></span>
+          </div>
+          <p class="aa-sub" id="aa-sub-2">React, GSAP, Three.js, WebGL — the full toolkit to make the web feel
+            extraordinary.</p>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="aa-slide" id="aa-slide-3">
+          <div class="aa-shape aa-shape-blob" style="right:5%;left:auto;bottom:auto;top:5%;"></div>
+          <span class="aa-slide-label" id="aa-label-3">Let's work</span>
+          <div class="aa-phrase" id="aa-phrase-3">
+            <span class="aa-word"><span class="aa-word-inner">YOUR</span></span>
+            <span class="aa-word"><span class="aa-word-inner accent">VISION,</span></span>
+            <span class="aa-word"><span class="aa-word-inner stroke">MY</span></span>
+            <span class="aa-word"><span class="aa-word-inner">CODE.</span></span>
+          </div>
+          <p class="aa-sub" id="aa-sub-3">Ready to build something remarkable? Let's make it happen.</p>
+        </div>
+
+      </div>
+      <div class="aa-progress-bar" id="aa-progress-bar"></div>
+      <div class="aa-counter" id="aa-counter">01 / 04</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+     PROJECTS — full-screen horizontal scroll
+═══════════════════════════════════════ -->
+  <section id="projects">
+    <div class="projects-intro">
+      <h2 class="projects-intro-h" style="font-family:'Bebas Neue',sans-serif;letter-spacing:-.01em">
+        Selected<br />Projects
+      </h2>
+      <p>Scroll to explore work — each built with intention, shipped with care.</p>
+    </div>
+  </section>
+
+  <div id="proj-scroll">
+    <div class="proj-sticky">
+      <div class="proj-track" id="proj-track">
+
+        <!-- PROJECT 1 -->
+        <div class="proj-card">
+          <div class="proj-img">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1600&q=80" alt="ShopFlow" />
+          </div>
+          <div class="proj-gradient"></div>
+          <div class="proj-content">
+            <div class="proj-index">Project 01</div>
+            <h2 class="proj-title">SHOP<br />FLOW</h2>
+            <p class="proj-desc">Full e-commerce platform with real-time inventory, Stripe payments, and admin
+              dashboard. Handles 10k+ products with sub-100ms search.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Next.js</span>
+              <span class="proj-tag">PostgreSQL</span>
+              <span class="proj-tag">Stripe</span>
+              <span class="proj-tag">Prisma</span>
+            </div>
+            <div class="proj-links">
+              <a href="Screens/projects_Details.html?id=shopflow" class="proj-link solid">Live Demo ↗</a>
+              <a href="#" class="proj-link outline">GitHub</a>
+            </div>
+          </div>
+          <div class="proj-counter">
+            <div class="proj-counter-current">01</div>
+            <div class="proj-counter-total">/ 04</div>
+            <div class="proj-dots">
+              <div class="proj-dot-item active"></div>
+              <div class="proj-dot-item"></div>
+              <div class="proj-dot-item"></div>
+              <div class="proj-dot-item"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="proj-card">
+          <div class="proj-img">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1600&q=80" alt="DevCollab" />
+          </div>
+          <div class="proj-gradient"></div>
+          <div class="proj-content">
+            <div class="proj-index">Project 02</div>
+            <h2 class="proj-title">DEV<br />COLLAB</h2>
+            <p class="proj-desc">Real-time collaborative coding environment with live video calls, shared execution
+              sandbox, and GitHub integration. Used by 500+ developers.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">React</span>
+              <span class="proj-tag">WebSockets</span>
+              <span class="proj-tag">Node.js</span>
+              <span class="proj-tag">Docker</span>
+            </div>
+            <div class="proj-links">
+              <a href="Screens/projects_Details.html?id=devcollab" class="proj-link solid">Live Demo ↗</a>
+              <a href="#" class="proj-link outline">GitHub</a>
+            </div>
+          </div>
+          <div class="proj-counter">
+            <div class="proj-counter-current">02</div>
+            <div class="proj-counter-total">/ 04</div>
+            <div class="proj-dots">
+              <div class="proj-dot-item"></div>
+              <div class="proj-dot-item active"></div>
+              <div class="proj-dot-item"></div>
+              <div class="proj-dot-item"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="proj-card">
+          <div class="proj-img">
+            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1600&q=80" alt="TaskMind" />
+          </div>
+          <div class="proj-gradient"></div>
+          <div class="proj-content">
+            <div class="proj-index">Project 03</div>
+            <h2 class="proj-title">TASK<br />MIND AI</h2>
+            <p class="proj-desc">AI-powered task manager that generates subtasks from plain-language goals, prioritizes
+              your backlog, and syncs with Google Calendar.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Next.js</span>
+              <span class="proj-tag">OpenAI</span>
+              <span class="proj-tag">MongoDB</span>
+              <span class="proj-tag">Auth.js</span>
+            </div>
+            <div class="proj-links">
+              <a href="Screens/projects_Details.html?id=taskmind" class="proj-link solid">Live Demo ↗</a>
+              <a href="#" class="proj-link outline">GitHub</a>
+            </div>
+          </div>
+          <div class="proj-counter">
+            <div class="proj-counter-current">03</div>
+            <div class="proj-counter-total">/ 04</div>
+            <div class="proj-dots">
+              <div class="proj-dot-item"></div>
+              <div class="proj-dot-item"></div>
+              <div class="proj-dot-item active"></div>
+              <div class="proj-dot-item"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div class="proj-card">
+          <div class="proj-img">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14431b9?w=1600&q=80" alt="AuthKit" />
+          </div>
+          <div class="proj-gradient"></div>
+          <div class="proj-content">
+            <div class="proj-index">Project 04</div>
+            <h2 class="proj-title">AUTH<br />KIT</h2>
+            <p class="proj-desc">Open-source plug-and-play auth library for Node.js. JWT + refresh tokens + 6 OAuth
+              providers. Zero config, full TypeScript, 800+ GitHub stars.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Node.js</span>
+              <span class="proj-tag">TypeScript</span>
+              <span class="proj-tag">Open Source</span>
+            </div>
+            <div class="proj-links">
+              <a href="Screens/projects_Details.html?id=authkit" class="proj-link solid">View Docs ↗</a>
+              <a href="#" class="proj-link outline">GitHub</a>
+            </div>
+          </div>
+          <div class="proj-counter">
+            <div class="proj-counter-current">04</div>
+            <div class="proj-counter-total">/ 04</div>
+            <div class="proj-dots">
+              <div class="proj-dot-item"></div>
+              <div class="proj-dot-item"></div>
+              <div class="proj-dot-item"></div>
+              <div class="proj-dot-item active"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Progress bar -->
+      <div class="proj-progress">
+        <div class="proj-progress-fill" id="proj-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POST-SCROLL CTA BRIDGE -->
+  <div id="proj-cta-bridge">
+    <p class="pcta-eyebrow">That's not all</p>
+    <h2 class="pcta-heading">20+ <em>Projects</em><br />Built & Shipped</h2>
+    <p class="pcta-sub">The four above are highlights. The full archive spans e-commerce, SaaS, open-source tools,
+      developer utilities, and more.</p>
+    <a href="Screens/projects.html" class="pcta-btn" id="cta-view-all">
+      View All Projects
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path d="M7 17L17 7M17 7H7M17 7v10" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════ -->
+  <section id="contact">
+    <div class="contact-bg-text">GET IN TOUCH</div>
+    <div class="contact-inner">
+      <div class="contact-label">Contact</div>
+      <div class="contact-heading" id="contact-heading">
+        <span class="line" id="chl1">LET'S BUILD</span><br />
+        <span class="line ch-stroke" id="chl2">SOMETHING</span><br />
+        <span class="line" id="chl3">GREAT.</span>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="cf-field">
+          <label class="cf-label">Name</label>
+          <input type="text" placeholder="Your name" required />
+        </div>
+        <div class="cf-field">
+          <label class="cf-label">Email</label>
+          <input type="email" placeholder="your@email.com" required />
+        </div>
+        <div class="cf-field full">
+          <label class="cf-label">Message</label>
+          <textarea rows="4" placeholder="Tell me about your project..."></textarea>
+        </div>
+      </form>
+      <div class="contact-bottom">
+        <div class="contact-socials">
+          <a href="#" class="cs-link" aria-label="GitHub">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.79 1.3 3.47.99.11-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.28-1.23 3.28-1.23.65 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.82.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+          </a>
+          <a href="#" class="cs-link" aria-label="LinkedIn">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 .77 1.77 0v20.56C0 23.23.8 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z" />
+            </svg>
+          </a>
+          <a href="#" class="cs-link" aria-label="Twitter">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+        </div>
+        <button class="submit-btn" type="submit" form="">
+          Send Message
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo"><span>&lt;</span>DEV<span>/&gt;</span></div>
+    <p>Designed & built by you · © 2026</p>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted)">Build by Usman</p>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/gsap/portfolio-gsap.js"></script>
+</body>
+
+</html>
